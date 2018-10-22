@@ -1,3 +1,13 @@
+# Welcome to the Master Branch
+
+This review focuses on creating ActiveRecord models with validations and and using nested forms. There are three steps each in their own branch. During the review we will move through each step and go over our answers:
+
+* **step1** asks you to create the necessary migrations for our models
+* **step2** asks you to add validations and associations
+* **step3** asks you to complete `app/views/orders/_form.html.erb` as well as the related controller methods
+
+Below is the README used throughout the exercise. Feel free to complete the app from scratch if you are looking for an extra challenge.
+
 # Module 2 Code Challenge Review
 
 ## The Domain
