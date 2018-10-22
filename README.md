@@ -8,7 +8,7 @@ We are going to write a site to help a small store keep track of user orders. Th
 
 * **items** must have a name and a price. The price must be greater than 0, but might not be an integer (e.g. $12.99). No two items can have the same name. The same item can be on many orders.
 
-* **orders** must belong to *exactly* one customer and one item. Additionally, orders will have a status attribute, 'sent', which must be either *true* or *false*, and a 'quantity' which must be a whole number greater than or equal to 1.
+* **orders** must belong to *exactly* one customer and one item. Additionally, orders will have a 'quantity' which must be a whole number greater than or equal to 1.
 
 ## User stories
 
