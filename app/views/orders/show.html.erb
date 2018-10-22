@@ -1,0 +1,10 @@
+<h1>Order <%=@order.id%></h1>
+
+<h2>Customer: <%=@order.customer.full_name%></h2>
+<h3>Email: <%=@order.customer.email%></h3>
+<h2>Item: <%=@order.item.name%></h2>
+<h3>Price: $<%=@order.item.price%></h2>
+<p><%=@order.item.description%></p>
+<h2>Quantity: <%=@order.quantity%></h2>
+
+<%= link_to :edit, edit_order_path(@order) %>

@@ -1,0 +1,43 @@
+<% if @order.errors.any? %>
+  <div id="error_explanation">
+    <h2>
+      <%= pluralize(@order.errors.count, "error") %> prohibit this order from being saved!
+    </h2>
+    <ul>
+      <% @order.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= form_for @order do |f| %>
+  <h3>Customer</h3>
+  <%= f.collection_select :customer_id, Customer.all, :id, :full_name %><br>
+  <%= f.fields_for :customer do |customer_f| %>
+    <%= customer_f.label :first_name  %>
+    <%= customer_f.text_field :first_name %><br>
+    <%= customer_f.label :last_name  %>
+    <%= customer_f.text_field :last_name %><br>
+    <%= customer_f.label :email  %>
+    <%= customer_f.text_field :email %><br>
+  <% end %>
+
+  <h3>Item</h3>
+  <%= f.collection_select :item_id, Item.all, :id, :name %><br>
+  <%= f.fields_for :item do |item_f| %>
+    <%= item_f.label :name %>
+    <%= item_f.text_field :name %><br>
+    <%= item_f.label :description %>
+    <%= item_f.text_area :description %><br>
+    <%= item_f.label :price %>
+    <%= item_f.text_field :price %><br>
+  <% end %>
+
+  <br><br>
+  <%= f.label :quantity %>
+  <%= f.text_field :quantity %><br>
+
+  <br>
+  <%= f.submit %>
+<% end %>
